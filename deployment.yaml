@@ -49,14 +49,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  xmutil-service
+  name: xmutil-service
 spec:
   type: NodePort
   ports:
     - name: http
-      port: 80
+      port: 8080
       protocol: TCP
-      targetPort: 8080
+      targetPort: 80
       nodePort: 31222
   selector:
     name: xmutil-backend
